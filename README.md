@@ -42,48 +42,60 @@ cd timed-ToDo-app
 npm install
 ```
 
-Configuration
+## Configuration
 Aucune configuration spéciale requise.
 
-Utilisation
+
 
 ## Exécutez les tests avec Jest en utilisant la commande suivante.
 
-bash
-
-Copy code
-
-npm test
-
-CI/CD
-
-## Intégration Continue (CI)
-
-Linting du code.
-
-Exécution des tests unitaires.
-Validation de la construction du projet.
-## Déploiement Continu (CD)
-Sur la branche principale, déploiement automatique après la réussite de CI.
-Déploiement sur un serveur de staging ou de production selon les paramètres.
-
-## Livraison Continue
-
-La création de tags Git déclenche automatiquement un processus de livraison continue.
-Publication d'une nouvelle version du projet sur le serveur ou une plateforme de distribution.
-Contribue
-## Running Tests
-
-To run tests, run the following command
-
 ```bash
-  npm test
+npm test
 ```
 
+## Intégration Continue (CI)
+Linting du code : Utilisation d'ESLint pour garantir la qualité et la consistance du code source.
+Exécution des tests unitaires : Les tests sont réalisés avec Jest pour s'assurer que chaque composant de l'application fonctionne correctement.
+Validation de la construction du projet : Vérification que l'application peut être construite sans erreurs.
+## Déploiement Continu (CD)
+Sur la branche principale : Après le succès du processus CI, un déploiement automatique est effectué.
+Environnement de déploiement : Le déploiement se fait soit sur un serveur de staging, soit sur un serveur de production, en fonction des paramètres configurés dans le workflow GitHub Actions.
+Livraison Continue
+## Tags Git :
+La création de tags Git déclenche un processus automatique de livraison continue.
+##  Publication :
+Une nouvelle version du projet est publiée sur le serveur ou une plateforme de distribution appropriée.
+Docker (Bonus)
+## Dockerfile :
+Un Dockerfile est fourni à la racine du projet pour construire une image Docker de l'application.
+## Validation avec Hadolint : 
+Le Dockerfile est validé avec Hadolint pour garantir le respect des meilleures pratiques Docker.
+Running Tests
+Pour exécuter les tests, utilisez la commande suivante :
 
+```bash
+npm test
+```
+## Contribution
+Les contributions sont les bienvenues ! Pour contribuer, veuillez suivre les étapes suivantes :
+
+Forker le projet.
+Créer une nouvelle branche.
+```bash
+git checkout -b feature/AmazingFeature
+```
+Committer vos modifications.
+```bash
+git commit -m 'Add some AmazingFeature
+```
+Push vers la branche 
+```bash
+git push origin feature/AmazingFeature
+```
+Ouvrir une Pull Request.
 ## Auteur
+@nhoss6
 
-- [@nhoss6](https://github.com/nhoss6/CICD/)
 
 ## Screenshots
 
