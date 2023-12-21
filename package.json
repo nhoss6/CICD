@@ -15,11 +15,12 @@
     },
     "main": "index.html",
     "devDependencies": {
-        "@babel/core": "*",
-        "@babel/preset-env": "*",
+        "@babel/core": "^7.23.6",
+        "@babel/preset-env": "^7.23.6",
         "babel-jest": "*",
         "browserify": "*",
         "eslint": "^8.56.0",
+        "eslint-plugin-jest": "^27.6.0",
         "jest": "*"
     },
     "dependencies": {

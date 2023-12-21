@@ -9,12 +9,12 @@ $('#addTask').keypress(function(e){
         let taskDesc = $('<span class="taskText">').text($('#addTask').val())
         
         let startBtn = $('<button class="startBtn">Start</button>')   
-        startBtn.click(function(event){
+        startBtn.click(function(event){// eslint-disable-line no-unused-vars
             startTask(newTask)
         })
         
         let doneBtn = $('<button class="complete notDone"></button>') 
-        doneBtn.click(function(event){
+        doneBtn.click(function(event){// eslint-disable-line no-unused-vars
             doneTask(newTask)
         })
 
