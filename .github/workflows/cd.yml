@@ -3,7 +3,9 @@ name: Continuous Deployment
 on:
   push:
     branches:
-      - CD
+      - master
+    tags:
+      - '*'
 
 jobs:
   deploy:
@@ -20,5 +22,5 @@ jobs:
     - name: Test
       run: npm test
     - name: Deploy to Production
-      run: <Votre commande de déploiement>
-      if: github.ref == 'refs/heads/master' and success()
+      run: <Votre commande de déploiement avec tag>
+      if: success()
