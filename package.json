@@ -21,12 +21,14 @@
         "browserify": "*",
         "eslint": "^8.56.0",
         "eslint-plugin-jest": "^27.6.0",
-        "jest": "*"
+        "jest": "*",
+        "jest-environment-jsdom": "^29.7.0"
     },
     "dependencies": {
         "jquery": "*"
     },
     "jest": {
+        "testEnvironment": "jsdom",
         "verbose": true,
         "setupFilesAfterEnv": [
             "<rootDir>/testSetup.js"
