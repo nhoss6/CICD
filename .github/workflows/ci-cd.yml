@@ -6,6 +6,15 @@ on:
     branches: [ master ]
 
 jobs:
+  lint_dockerfile:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run hadolint
+      uses: hadolint/hadolint-action@v1.5.0
+      with:
+        dockerfile: './Dockerfile'
+
   build_and_test:
     runs-on: ubuntu-latest
     steps:
@@ -20,7 +29,7 @@ jobs:
       run: npm test
 
   deploy:
-    needs: build_and_test
+    needs: [build_and_test, lint_dockerfile]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     steps:
@@ -36,5 +45,5 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN}} # Utilise le token GitHub par défaut pour le déploiement
+        github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN}}
         publish_dir: ./dist
