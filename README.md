@@ -1,7 +1,7 @@
 
-# Project Title
+# TO DO CI-CD
 
-A brief description of what this project does and who it's for
+
 
 
 ## Description
@@ -46,15 +46,6 @@ Configuration
 Aucune configuration spéciale requise.
 
 Utilisation
-## Lancez l'application avec la commande suivante.
-
-sql
-
-Copy code
-
-npm start
-
-Tests
 
 ## Exécutez les tests avec Jest en utilisant la commande suivante.
 
