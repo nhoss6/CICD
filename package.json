@@ -35,6 +35,7 @@
     "scripts": {
         "lint": "eslint .",
         "bundle": "browserify scripts/task-add.js -o bundle.js",
-        "test": "jest --coverage"
+        "test": "jest --coverage",
+        "build": "npm run bundle"
     }
 }
